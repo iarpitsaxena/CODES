@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        body {
+            counter-reset: count;
+        }
+
+        /* div {
+            counter-reset: topic;
+        } */
+        /* 
+        h1::before {
+            counter-increment: chapter;
+            content: "chapter " counter(chapter) ": ";
+        }
+
+        h2::before {
+            counter-increment: topic;
+            content: "topic " counter(chapter) "." counter(topic) ": ";
+        } */
+
+        h3 {
+            counter-reset: olcount;
+        }
+
+        h3::before {
+            counter-increment: count;
+            content: counter(count) " - ";
+        }
+
+        ol {
+            counter-reset: licount;
+            list-style:inside;
+        }
+
+        ol::before {
+            counter-increment: olcount;
+            content: "List " counter(olcount) " → ";
+        }
+
+        li::before {
+            counter-increment: licount;
+            content: counter(licount) " - ";
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <h1>Chapter Name here ..</h1>
+        <h2>Topic name here ..</h2>
+        <h2>Topic name here ..</h2>
+        <h2>Topic name here ..</h2>
+        <h2>Topic name here ..</h2>
+    </div>
+    <div>
+        <h1>Chapter Name here ..</h1>
+    </div>
+    <div>
+        <h1>Chapter Name here ..</h1>
+    </div>
+    <div>
+        <h1>Chapter Name here ..</h1>
+    </div>
+    <div>
+        <h1>Chapter Name here ..</h1>
+    </div>
+    <div>
+        <h1>Chapter Name here ..</h1>
+    </div> -->
+
+    <div class="my-div">
+        <h3>My First counter</h3>
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+        <ol>
+            <li>First Test</li>
+            <li>Second Test</li>
+            <li>Third Test</li>
+        </ol>
+        <h3>My Second Counter</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, soluta, vero accusamus, ipsum quasi
+            expedita eum possimus aspernatur magnam voluptate cumque ratione numquam nobis dolorem. Culpa, consequatur
+            vitae delectus dicta voluptatum rerum minus animi illum ea laudantium ipsum tempora deserunt.</p>
+        <h3>My Third Counter</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum eius officiis asperiores doloremque odit
+            recusandae. Amet neque ea doloremque officiis voluptatum dolor adipisci, aliquam quaerat pariatur magnam,
+            possimus architecto iure omnis, incidunt voluptates laboriosam nam perferendis a nihil cum. Iste.</p>
+    </div>
+</body>
+
+</html>
+
+<div class="1hello"></div>
+<div class="2hello"></div>
+<div class="3hello"></div>
+<div class="4hello"></div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button id="add">Add</button>
+    <button id="del">Delete</button>
+    <button id="new">Add Task</button>
+    <ul></ul>
+
+    <script>
+      const list = document.querySelector("ul");
+      const input = document.querySelector("input");
+      const add = document.getElementById("add");
+      const del = document.getElementById("del");
+      const newTask = document.getElementById("new");
+
+      add.addEventListener("click", () => {
+        const text = input.value;
+        if (!text) return;
+        const li = document.createElement("li");
+        li.textContent = text;
+        list.appendChild(li);
+        input.value = "";
+      });
+      del.addEventListener("click", () => {
+        const li = list.querySelector("li:first-child");
+        list.removeChild(li);
+      });
+    </script>
+  </body>
+</html>

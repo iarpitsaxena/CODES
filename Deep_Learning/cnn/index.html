@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Classifier</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5;
+      }
+      #upload-form {
+        text-align: center;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      #upload-form input[type="file"] {
+        margin-top: 15px;
+        padding: 5px;
+      }
+      #result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="upload-form">
+      <h1>Upload an Image</h1>
+      <input type="file" id="file-input" accept="image/*" />
+      <button onclick="uploadImage()">Predict</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function uploadImage() {
+        const fileInput = document.getElementById("file-input");
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "Predicting...";
+
+        if (fileInput.files.length === 0) {
+          resultDiv.innerHTML = "Please select an image file.";
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("file", fileInput.files[0]);
+
+        fetch("/predict", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.error) {
+              resultDiv.innerHTML = "Error: " + data.error;
+            } else {
+              resultDiv.innerHTML = `Prediction: Class ${
+                data.predicted_class
+              } <br> Confidence: ${data.confidence.toFixed(2)}`;
+            }
+          })
+          .catch((error) => {
+            resultDiv.innerHTML = "An error occurred: " + error;
+          });
+      }
+    </script>
+  </body>
+</html>

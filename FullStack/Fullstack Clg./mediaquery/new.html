@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiveness Task</title>
+    <style>
+        .main-container{
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .container-one, .container-two {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            background-color: darkgoldenrod;
+            margin: 20px;
+        }
+
+        .container-one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            background-color: darkgray;
+            margin: 20px;
+        }
+
+        @media (min-width: 0px) and (max-width: 400px){
+            .main-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 401px) and (max-width: 1024px){
+            .main-container {
+                flex-direction: row;
+            }
+
+            .container-one {
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .container-one {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container-one">
+            <div class="box" id="one"></div>
+            <div class="box" id="two"></div>
+        </div>
+        <div class="container-two"></div>
+    </div>
+</body>
+</html>

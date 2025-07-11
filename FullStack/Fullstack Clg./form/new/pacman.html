@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+
+        }
+        .container{
+            position:absolute;
+            top: 15em;
+            left: 15em;
+            height: 50vh;
+            width: 50%;
+            display: flex;
+            overflow: hidden;
+            
+        }
+        .face{
+            background-color: rgb(202, 89, 89);
+            border-radius: 50%;
+            height: 3em;
+            width: 3em;
+            position: relative;
+            background: transparent;
+            z-index: 1;
+            &::before, &::after{
+                position:absolute;
+                top: -35px;
+                display: block;
+                border-radius: 50%;
+                content:'';
+                height: 0px;
+                width: 0px;
+            }
+            &::before{
+                border: 35px solid #ffcc00;
+                border-left-color: transparent;
+                border-bottom-color: #ffcc00;
+                animation:facebottom 1 ease infinite;
+            }
+            &::after{
+                border: 35px solid #ffcc00;
+                border-right-color: transparent;
+                border-top-color: transparent;
+                animation:facebottom 1 ease infinite;
+            }
+
+            @animation facebottom{
+                
+            }
+            
+
+        }
+
+        @keyframes
+        
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="face">
+
+        </div>
+    </main>
+    
+</body>
+</html>

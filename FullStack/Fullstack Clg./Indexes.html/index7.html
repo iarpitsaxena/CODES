@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p{
+            background-color: red;
+
+        }
+        div>p{
+            background-color: blueviolet;
+            font-size: large;
+        }
+
+        /* div~p{
+            background-color: blue;
+            font-size: x-large;
+        } */
+
+        /* div p{
+            background-color: green;
+        } */
+
+        p::after{
+            content: "Hello";
+            background-color: aqua;
+            color: red;
+        }
+
+        input:checked{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, quaerat.
+    </p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, tempore.
+            <h1></h1>
+        </p>
+        <section>
+            <p>lorem</p>
+        </section>
+        <h1>hello</h1>
+        <p>lorem</p>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, illum!
+    </p>
+    <p>lorem10
+
+    </p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>
+Lorem ipsum dolor sit amet consectetur.
+    </p>
+    <div>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique impedit delectus commodi iste reiciendis libero mollitia dicta totam atque, voluptate sed rem ea ipsa aliquam a consequatur officiis iusto illo!</p>
+    </div>
+
+
+    <form action="">
+        <input type="checkbox" name="cricket" id="" placeholder="Enter your name">
+        <input type="checkbox" name="cricket" id="" placeholder="Enter your name">
+
+        <input type="checkbox" name="cricket" id="" placeholder="Enter your name">
+
+        <input type="radio" name="cricket" id="" placeholder="Enter your name">
+        <input type="radio" name="hockey" id="" placeholder="Enter your name">
+        <input type="radio" name="ball" id="" placeholder="Enter your name">
+
+    </form>
+    
+    
+</body>
+</html>

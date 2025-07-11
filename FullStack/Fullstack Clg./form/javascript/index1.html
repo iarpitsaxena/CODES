@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(202, 230, 255);
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .cup{
+            position: absolute;
+            height: 200px;
+            width: 300px;
+            border-radius: 0 0 140px 120px;
+            background-color: rgb(241, 127, 127);
+            margin: auto;
+            display: inline-block;
+            /* overflow: hidden; */
+/* z-index: 1; */
+        }
+        .cuphandle{
+            position: absolute;
+            height: 120px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: rgb(227, 131, 131);
+            top: 40%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .inner{
+            width: 60%;
+            height: 60%;
+            background-color:rgb(202, 230, 255);
+            border-radius: 50%;
+        }
+        .plate{
+            position: absolute;
+            top: 180px;
+            height:50px;
+            background-color: rgb(157, 156, 147);
+            width: 350px;
+            left: -30px;
+            border-radius: 40%;
+            z-index: -1;
+        }
+        .shade{
+            position: relative;
+            height: 200px;
+            width: 300px;
+            background:linear-gradient(rgba(72, 67, 67, 0.8),transparent);
+            border-radius: 5px 5px 140px 120px;
+        }
+        .steam{
+            position: absolute;
+            top: -80px;
+            left: 50px;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 80%;
+            background-color: rgb(197, 191, 191);
+            clip-path: polygon(30% 55%, 45% 37%, 33% 57%, 35% 82%, 25% 100%, 32% 78%);
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="steam"></div>
+        <div class="cupbody">
+            <div class="cup">
+                <div class="shade"></div>
+                <div class="cuphandle">
+                    <div class="inner"></div>
+
+                </div>
+            </div>
+            <div class="plate">
+                <div class="shadow"></div>
+            </div>
+        
+        </div>
+        
+    </div>
+
+
+</body>
+</html>

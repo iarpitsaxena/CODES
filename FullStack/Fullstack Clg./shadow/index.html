@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        } */
+
+        :root{
+            --shadow: 10px 10px 5px red;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: calc(50% - 100px);
+            left: calc(50% - 100px);
+            /* border: 2px solid black; */
+            /* box-shadow: 5px 5px 5px blue; */
+            background-color: blanchedalmond;
+        }
+        .box:hover{
+            box-shadow:var(--shadow);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

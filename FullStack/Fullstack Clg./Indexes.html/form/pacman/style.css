@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.container {
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.face {
+    position: relative;
+    background: transparent;
+    z-index: 1;
+
+    &::before, &::after {
+        position: absolute;
+        top: -35px;
+        display: block;
+        border-radius: 50%;
+        content: "";
+        height: 0px;
+        width: 0px;
+    }
+
+    &::before {
+        border: 35px solid #ffcc00;
+        border-left-color: transparent;
+        border-bottom-color: #ffcc00;
+        animation: facetop 1s ease infinite;
+    }
+
+    &::after {
+        border: 35px solid #ffcc00;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        animation: facebottom 1s ease infinite;
+    }
+}
+
+@keyframes facebottom {
+    to {
+        transform: rotate(45deg);
+    }
+}

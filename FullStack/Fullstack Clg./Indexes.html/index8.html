@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout in HTML</title>
+    <style>
+        .left,
+        .right,
+        .main,
+        .header{
+            float: none;
+            height: 100px;
+            width: 10%;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .header:hover {
+            background-color: rgb(41, 30, 15);
+            transform: rotate(50deg);
+            margin: 50px;
+            
+        }
+        .left:hover{
+            background-color: rgb(101, 78, 78);
+            transform: scale(1.5);
+            
+        }
+        .right:hover{
+            background-color: rgb(84, 71, 147);
+            transform: translate(10px,50px);
+        }
+        .main:hover{
+            background-color: rgb(226, 150, 28);
+            transform: skew(45deg);
+        }
+        p:hover{
+            color: red;
+            font-size: 20px;
+            
+            
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="left"></div>
+    <div class="main"></div>
+    <div class="right"></div>
+
+    <p>this is a text</p>
+
+    
+    <marquee onmouseover="this.stop()" onmouseleave="this.start()" behavior="" direction="right" scrollamount="60"><img src="witch-7518_512.gif" alt="">
+        <img src="witch-7518_512.gif" alt="">
+        <img src="witch-7518_512.gif" alt=""></marquee>
+    
+</body>
+
+</html>

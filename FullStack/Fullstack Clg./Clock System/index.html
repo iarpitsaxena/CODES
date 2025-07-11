@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="clock-container">
+      <div id="presentTime" class="time-display">Current Time:</div>
+      <div id="lapTime" class="time-display">Lap Time: 00:00:00</div>
+      <div id="globalTime" class="time-display">Global Time: 00:00:00</div>
+      <div id="alarmTime" class="time-display">Set Time:</div>
+      <div class="btn-container">
+        <button class="button" onclick="startLap()">Start Lap</button>
+        <button class="button" onclick="resetLap()">Reset Lap</button>
+      </div>
+    </div>
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const currentTime = now.toLocaleTimeString();
+        document.getElementById("presentTime").textContent =
+          "Current Time: " + currentTime;
+      }
+
+      let lapStart = null;
+      let globalStart = new Date();
+
+      function updateTimers() {
+        if (lapStart) {
+          const lapElapsed = new Date(new Date() - lapStart);
+          document.getElementById("lapTime").textContent =
+            "Lap Time: " + new Date(lapElapsed).toISOString().substr(11, 8);
+        }
+        const globalElapsed = new Date(new Date() - globalStart);
+        document.getElementById("globalTime").textContent =
+          "Global Time: " + new Date(globalElapsed).toISOString().substr(11, 8);
+      }
+
+      function startLap() {
+        lapStart = new Date();
+      }
+
+      function resetLap() {
+        lapStart = null;
+        document.getElementById("lapTime").textContent =
+          "Lap Time: 00:00:00:00";
+      }
+
+      setInterval(updateTime, 1000);
+      setInterval(updateTimers, 1000);
+    </script>
+  </body>
+</html>

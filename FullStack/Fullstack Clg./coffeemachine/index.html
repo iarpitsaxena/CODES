@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .container{
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            background-color: azure;
+            top: 100px;
+            left: 60vh;
+            border: 2px solid black;
+            z-index: -1;
+        }
+        .header{
+            border: 2px solid black;
+            height: 100px;
+            width: 350px;
+            left: 20px;
+            top: 20px;
+            position: absolute;
+        }
+        .button1,.button2,.display{
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 50%;
+            /* z-index: 1;   */
+        }
+        .button2{
+            left: 60px;
+
+        }
+        .display{
+            left: 140px;
+            width:50px;
+            height: 50px;
+            top:30px;
+        }
+        .light1,.light2,.light3{
+            position: absolute;
+            top: 30px;
+            left: 280px;
+            border: 2px solid black;
+            display: inline;
+            height: 30px;
+            width:10px;
+        }
+        .light2{
+            left: 300px;
+            height: 50px;
+            top: 20px;
+        }
+        .light3{
+            left: 320px;
+            top:30px;
+        }
+
+        .middle{
+            border: 3px solid black;
+            height: 200px;
+            width: 280px;
+            left: 50px;
+            top: 125px;
+            position: absolute;
+            border-radius: 10px;
+        }
+        .middletop{
+            border: 3px solid black;
+            height: 50px;
+            width: 120px;
+            left: 70px;
+            position: absolute;
+            border-radius: 10px;
+        }
+        .middlebottom{
+            border: 3px solid black;
+            height: 125px;
+            width: 220px;
+            left: 25px;
+            top:70px;
+            position: absolute;
+            border-radius: 10px;
+
+        }
+        .dispenser{
+            position: relative;
+            /* top: 200px; */
+            left: 90px;
+            border: 2px solid black;
+            height: 30px;
+            width: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+        .dispensertip{
+            position: relative;
+            left: 101px;
+            /* top: 10px; */
+            border: 2px solid black;
+            height: 10px;
+            width: 5px;
+            border-radius: 0 0 10px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="display"></div>
+            <div class="light1"></div>
+            <div class="light2"></div>
+            <div class="light3"></div>
+
+
+        </div>
+        <div class="middle">
+            <div class="middletop">
+
+            </div>
+            <div class="middlebottom">
+                <div class="dispenser"></div>
+                <div class="dispensertip"></div>
+                <div class="lever"></div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+</body>
+</html>
